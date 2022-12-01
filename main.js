@@ -1,11 +1,14 @@
 const app = Vue.createApp({
     data() {
         return {
-            message: 'Howdy!',
-            link: 'https://vuejs.org/',
-            htmlContent: '<h1>Heey</h1>',
-        };
-    }
+            count: 0
+        }
+    },
+    methods: {
+        onIncrementCounter(){
+            this.count = this.count + 1;
+        }
+    }    
 });
 
 app.mount('#app');

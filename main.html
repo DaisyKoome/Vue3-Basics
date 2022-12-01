@@ -12,15 +12,14 @@
     </style>
 </head>
 <body>
-    <div>Hello World!</div>
     <div id="app" v-cloak>
-        <div id="message">{{ message }}</div>
-        <div>{{ 1+1 }}</div>
-        <div>{{ false ? 'yes': 'no' }}</div>
+        <div>{{count}}</div>
+
         <div>
-            <a :href="link">Go to official docs</a>
+            <button @click="onIncrementCounter()" >Increment count</button>
         </div>
-        <div v-html="htmlContent"></div>
+
+        <div>The counter value is {{ count }}</div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="main.js"></script>
