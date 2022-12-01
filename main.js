@@ -5,7 +5,10 @@ const app = Vue.createApp({
         }
     },
     methods: {
-        onIncrementCounter(){
+        onIncrementCounter(event, name){
+            event.preventDefault();
+            console.log(name);
+            console.log(event);
             this.count = this.count + 1;
         }
     }    
