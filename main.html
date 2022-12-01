@@ -13,11 +13,11 @@
 </head>
 <body>
     <div id="app" v-cloak>
-        <div v-if="isLoggedIn === true">User is logged in</div>
-        <div v-if="isLoggedIn !== true">User is not logged in</div>
+        <div v-if="isLoggedIn">User is logged in</div>
+        <div v-if="!isLoggedIn">User is not logged in</div>
 
         <div>
-            <button @click="checkLogin()">Login</button>
+            <button @click="checkLogin()">{{ isLoggedIn ? 'Logout' : 'Login' }}</button>
         </div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
