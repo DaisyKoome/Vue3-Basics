@@ -1,12 +1,15 @@
 const app = Vue.createApp({
     data() {
         return {
-            count: 0
+            isLoggedIn: false
         }
     },
     methods: {
         onIncrementCounter(event, name){
             this.count = this.count + 1;
+        },
+        checkLogin() {
+            this.isLoggedIn = !this.isLoggedIn;
         }
     }    
 });
