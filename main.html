@@ -16,7 +16,7 @@
         <div>{{count}}</div>
 
         <div>
-            <a href="" @click="onIncrementCounter($event, 'Leela')" >Increment count</a>
+            <a href="" @click.prevent="onIncrementCounter()" >Increment count</a>
         </div>
 
         <div>The counter value is {{ count }}</div>
