@@ -14,7 +14,7 @@
 <body>
     <div id="app" v-cloak>
         <div v-if="isLoggedIn">User is logged in</div>
-        <div v-if="!isLoggedIn">User is not logged in</div>
+        <div v-else>User is not logged in</div>
 
         <div>
             <button @click="checkLogin()">{{ isLoggedIn ? 'Logout' : 'Login' }}</button>
