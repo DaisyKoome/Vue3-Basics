@@ -18,6 +18,23 @@
         <div>
             <button @click="checkLogin()">{{ isLoggedIn ? 'Logout' : 'Login' }}</button>
         </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr v-for="(post, index) in posts">
+                    <td>{{ post.id }}</td>
+                    <td>{{ index }}</td>
+                    <td>{{ post.title }}</td>
+                </tr>               
+            </tbody>
+        </table>
+
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="main.js"></script>
