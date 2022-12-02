@@ -19,6 +19,8 @@
             <button @click="checkLogin()">{{ isLoggedIn ? 'Logout' : 'Login' }}</button>
         </div>
 
+        <div v-for="(value, key) in person">{{ key }} - {{ value }}</div>
+
         <table>
             <thead>
                 <tr>
@@ -35,6 +37,26 @@
             </tbody>
         </table>
 
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <label for="">Name</label>
+                    <input 
+                        type="text" 
+                        class="form-control" 
+                        placeholder="name"
+                        v-model="name"
+                    />
+                    <div class="name">{{ fullName() }}</div>
+                </div>
+
+                <div>
+                    <label for="">Country</label>
+                    <input type="text" class="form-control" v-model="country">
+                    <div>{{ country }}</div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="main.js"></script>

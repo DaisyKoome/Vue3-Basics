@@ -2,6 +2,12 @@ const app = Vue.createApp({
     data() {
         return {
             isLoggedIn: true,
+            country:'',
+            name:'Daisy',
+            person: {
+                name: 'Dee',
+                country: 'USA'
+            },
             posts: [
                 { 
                     id: 1, 
@@ -23,6 +29,14 @@ const app = Vue.createApp({
         }
     },
     methods: {
+        fullName(){
+            console.log('Running again...');
+            return  'Hello ' + this.name;
+        },
+        onNameChange(event) {
+            console.log(event.target.value);
+            this.name = event.target.value;
+        },
         onIncrementCounter(event, name){
             this.count = this.count + 1;
         },
